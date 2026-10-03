@@ -1,6 +1,6 @@
-# Records screenshots (1280 and 390 px) and videos of the extension e2e tests and the public
-# apps/web pages, and uploads them as an artifact. No write permissions or secrets: it runs the
-# PR's code. visual-qa-comment.yml links the artifact from the PR.
+# Records 1280 and 390 px screenshots of the extension e2e tests and screenshots plus a scroll
+# video of the public apps/web pages, and uploads them as an artifact. No write permissions or
+# secrets: it runs the PR's code. visual-qa-comment.yml links the artifact from the PR.
 name: Visual QA
 on:
   pull_request:
