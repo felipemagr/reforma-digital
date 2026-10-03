@@ -31,9 +31,10 @@ jobs:
             const body = [
               marker,
               '### Visual QA',
-              `Capturas (1280 y 390 px) de las pantallas que toca esta PR, y vídeo de las páginas de \`apps/web\`, para ${run.head_sha.slice(0, 7)}.`,
               '',
-              `- [Descargar capturas y vídeos](https://github.com/${owner}/${repo}/actions/runs/${run.id}/artifacts/${artifact.id}) (caducan en 14 días)`,
+              `Capturas (1280 y 390 px) de las pantallas que toca esta PR en el commit ${run.head_sha.slice(0, 7)}. Las páginas de \`apps/web\` incluyen además un vídeo con scroll.`,
+              '',
+              `- [Descargar el zip](https://github.com/${owner}/${repo}/actions/runs/${run.id}/artifacts/${artifact.id}) (caduca en 14 días)`,
               `- [Ver el run y la lista de pantallas](${run.html_url})`,
               ...(run.conclusion === 'success' ? [] : ['', '⚠️ Algún paso ha fallado: puede que falten capturas.']),
             ].join('\n');
